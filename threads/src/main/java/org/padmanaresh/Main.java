@@ -7,6 +7,8 @@ public class Main {
         hello world 
         from 
         java text block
+        
+        
         """;
         System.out.println(a);
     }
