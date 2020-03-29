@@ -3,7 +3,7 @@ package org.padmanaresh.completablefeature.examples;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
-public class CompletableFeatureBasicExample {
+public class CompletableFutureBasicExample {
 
     public static void main(String[] args) throws Exception {
         System.out.println("main thread started ...");
