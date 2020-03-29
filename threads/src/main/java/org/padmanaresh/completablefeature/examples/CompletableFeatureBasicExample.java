@@ -13,6 +13,8 @@ public class CompletableFeatureBasicExample {
          */
 
         CompletableFuture.supplyAsync(() -> longNetworkProcess(2))
+                .thenApply(val -> processValue(val))
+                .thenApply(val -> processValue(val))
                 .thenAccept( result -> System.out.println( "Network Process replied with val " + result));
         // int j = longNetworkProcess(2);
         //System.out.println(j);
@@ -28,6 +30,16 @@ public class CompletableFeatureBasicExample {
             e.printStackTrace();
         }
         return i * i ;
+    }
+
+    private static int processValue(int i){
+        System.out.println("process value in thread " + Thread.currentThread().getName());
+        if(i%2 == 0){
+            i = i+3;
+        }else{
+            i = i+4;
+        }
+        return i;
     }
 
 
