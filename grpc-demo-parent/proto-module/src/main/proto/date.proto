@@ -1,0 +1,10 @@
+//the syntax of this file is proto 3
+syntax = "proto3";
+option java_package = "com.padma.util";
+option java_multiple_files = true;
+
+message Date {
+    int32 year = 1;
+    int32 month = 2;
+    int32 day = 3;
+}
