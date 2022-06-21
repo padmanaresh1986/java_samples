@@ -4,16 +4,16 @@ import java.util.Objects;
 
 public class CountryName {
     public static void main(String[] args) {
-        //System.out.println(getCountryNameFromCode("BM"));
+        System.out.println(getCountryNameFromCode("BQ"));
         //System.out.println(getCountryNameFromCode("AF"));
         //System.out.println(getCountryNameFromCode("AE"));
         //System.out.println(getCountryNameFromCode("LL"));
 
 
-        System.out.println(getCountryCodeFromName("Bermuda"));
-        System.out.println(getCountryCodeFromName("Afghanistan"));
-        System.out.println(getCountryCodeFromName("United Arab Emirates"));
-        System.out.println(getCountryCodeFromName("abcd"));
+        System.out.println(getCountryCodeFromName("Bolivia"));
+        //System.out.println(getCountryCodeFromName("Afghanistan"));
+        //System.out.println(getCountryCodeFromName("United Arab Emirates"));
+        //System.out.println(getCountryCodeFromName("abcd"));
     }
 
     private static String getCountryNameFromCode(String code){
@@ -25,7 +25,7 @@ public class CountryName {
                     .filter(locale -> locale.getCountry().equalsIgnoreCase(code))
                     .findFirst().orElse(null);
             if(Objects.nonNull(filteredLocale)){
-                countryName = filteredLocale.getDisplayCountry();
+                countryName = filteredLocale.getDisplayCountry(Locale.US);
             }
         }
         return countryName;

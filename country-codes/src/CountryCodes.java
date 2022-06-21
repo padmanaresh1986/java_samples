@@ -6,14 +6,17 @@ public class CountryCodes {
 
         String[] locales = Locale.getISOCountries();
 
-        for (String countryCode : locales) {
+       /* for (String countryCode : locales) {
 
             Locale obj = new Locale("", countryCode);
 
             System.out.println("Country Code = " + obj.getCountry()
                     + ", Country Name = " + obj.getDisplayCountry());
 
-        }
+        }*/
+
+        System.out.println(CountryCodesEnum.getCountryCodeEnumFromCountryName("Afghanistan").name());
+        System.out.println(CountryCodesEnum.getCountryCodeEnumFromCode("AF").countryName);
 
     }
 }
