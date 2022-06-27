@@ -1,19 +1,37 @@
 package com.example.xml.xmldemo.classes;
 
-import org.apache.catalina.LifecycleState;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class QbXmlService {
-    public boolean marshal() throws Exception{
+public class ReportDataToQbXmlService {
+
+    @Autowired
+    ReportDataService reportDataService;
+
+    @Autowired
+    QbXmlService qbXmlService;
+
+
+    public boolean convert() throws Exception{
+        //first generate source xml
+        reportDataService.marshal();
+        //once xml is generated read that to memory again
+        ReportData reportData = reportDataService.unmarshall();
+        //generate QBXML from report Data
+        QbXml qbXML = getQbXml(reportData);
+
+        return qbXmlService.marshalObject(qbXML);
+    }
+
+    private QbXml getQbXml(ReportData reportDataObj) {
         QbXml qbXml = new QbXml();
         QbXml.QbXmlMsgsRs qbXmlMsgsRs= new QbXml.QbXmlMsgsRs();
         var generalDetailReportQueryRs = new QbXml.QbXmlMsgsRs.GeneralDetailReportQueryRs();
@@ -66,22 +84,8 @@ public class QbXmlService {
         generalDetailReportQueryRs.setReportRet(reportRet);
         qbXmlMsgsRs.setGeneralDetailReportQueryRs(generalDetailReportQueryRs);
         qbXml.setQbXmlMsgsRs(qbXmlMsgsRs);
-
-        JAXBContext context = JAXBContext.newInstance(QbXml.class);
-        Marshaller mar= context.createMarshaller();
-        mar.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        mar.marshal(qbXml, new File("D:/qbXml-data.xml"));
-        System.out.println("done");
-        return true;
+        return qbXml;
     }
 
-    public boolean marshalObject(QbXml qbXml) throws Exception{
-        JAXBContext context = JAXBContext.newInstance(QbXml.class);
-        Marshaller mar= context.createMarshaller();
-        mar.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        mar.marshal(qbXml, new File("D:/qbXml-data.xml"));
-        System.out.println("QB Xml saved in D:/qbXml-data.xml");
-        return true;
-    }
 
 }
