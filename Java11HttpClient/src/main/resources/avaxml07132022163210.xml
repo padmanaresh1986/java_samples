@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<QBXML>
+    <QBXMLMsgsRs>
+        <GeneralDetailReportQueryRs statusCode="0" statusSeverity="Info" statusMessage="Status OK">
+            <ReportRet>
+                <ReportTitle>Open Invoices</ReportTitle>
+                <ReportSubtitle>As of Jul 13, 2022</ReportSubtitle>
+                <ReportBasis>Accrual</ReportBasis>
+                <NumRows>13</NumRows>
+                <NumColumns>9</NumColumns>
+                <NumColTitleRows>1</NumColTitleRows>
+                <ColDesc colID="1" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value=""/>
+                    <ColType>Blank</ColType>
+                </ColDesc>
+                <ColDesc colID="2" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="Type"/>
+                    <ColType>TxnType</ColType>
+                </ColDesc>
+                <ColDesc colID="3" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="Date"/>
+                    <ColType>Date</ColType>
+                </ColDesc>
+                <ColDesc colID="4" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="Num"/>
+                    <ColType>RefNumber</ColType>
+                </ColDesc>
+                <ColDesc colID="5" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="P. O. #"/>
+                    <ColType>PONumber</ColType>
+                </ColDesc>
+                <ColDesc colID="6" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="Terms"/>
+                    <ColType>Terms</ColType>
+                </ColDesc>
+                <ColDesc colID="7" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="Due Date"/>
+                    <ColType>DueDate</ColType>
+                </ColDesc>
+                <ColDesc colID="8" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="Aging"/>
+                    <ColType>Aging</ColType>
+                </ColDesc>
+                <ColDesc colID="9" dataType="STRTYPE">
+                    <ColTitle titleRow="1" value="Open Balance"/>
+                    <ColType>OpenBalance</ColType>
+                </ColDesc>
+                <reportData>
+                    <textRow rowNumber="1" value="1007/HOME TOWN MORTGAGE"/>
+                    <DataRow rowNumber="2">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Invoice"/>
+                        <colData colId="3" value="2022-05-31"/>
+                        <colData colId="4" value="AVA-00001713"/>
+                        <colData colId="6" value="Next Month"/>
+                        <colData colId="7" value="2022-06-30"/>
+                        <colData colId="8" value="13"/>
+                        <colData colId="9" value="1599.64"/>
+                    </DataRow>
+                    <DataRow rowNumber="3">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Invoice"/>
+                        <colData colId="3" value="2022-04-30"/>
+                        <colData colId="4" value="AVA-00004958"/>
+                        <colData colId="6" value="Next Month"/>
+                        <colData colId="7" value="2022-05-31"/>
+                        <colData colId="8" value="43"/>
+                        <colData colId="9" value="1745.01"/>
+                    </DataRow>
+                    <DataRow rowNumber="4">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Invoice"/>
+                        <colData colId="3" value="2022-06-30"/>
+                        <colData colId="4" value="AVA-00008220"/>
+                        <colData colId="6" value="Next Month"/>
+                        <colData colId="7" value="2022-06-30"/>
+                        <colData colId="8" value="13"/>
+                        <colData colId="9" value="1599.64"/>
+                    </DataRow>
+                    <DataRow rowNumber="5">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Invoice"/>
+                        <colData colId="3" value="2022-06-28"/>
+                        <colData colId="4" value="AVA-00011827"/>
+                        <colData colId="6" value="Next Month"/>
+                        <colData colId="7" value="2022-07-31"/>
+                        <colData colId="8" value="0"/>
+                        <colData colId="9" value="1495.97"/>
+                    </DataRow>
+                    <DataRow rowNumber="6">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Invoice"/>
+                        <colData colId="3" value="2022-06-26"/>
+                        <colData colId="4" value="AVA-00015648"/>
+                        <colData colId="6" value="Next Month"/>
+                        <colData colId="7" value="2022-06-26"/>
+                        <colData colId="8" value="17"/>
+                        <colData colId="9" value="1495.97"/>
+                    </DataRow>
+                    <DataRow rowNumber="7">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Payment"/>
+                        <colData colId="3" value="2022-05-31"/>
+                        <colData colId="4" value="AVA-1092"/>
+                        <colData colId="9" value="-704.46"/>
+                    </DataRow>
+                    <DataRow rowNumber="8">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Payment"/>
+                        <colData colId="3" value="2022-04-30"/>
+                        <colData colId="4" value="AVA-1887"/>
+                        <colData colId="9" value="-1245.26"/>
+                    </DataRow>
+                    <DataRow rowNumber="9">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Payment"/>
+                        <colData colId="3" value="2022-06-30"/>
+                        <colData colId="4" value="AVA-2829"/>
+                        <colData colId="9" value="-704.46"/>
+                    </DataRow>
+                    <DataRow rowNumber="10">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Payment"/>
+                        <colData colId="3" value="2022-06-28"/>
+                        <colData colId="4" value="AVA-3367"/>
+                        <colData colId="9" value="-1240.29"/>
+                    </DataRow>
+                    <DataRow rowNumber="11">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="2" value="Payment"/>
+                        <colData colId="3" value="2022-06-26"/>
+                        <colData colId="4" value="AVA-4269"/>
+                        <colData colId="9" value="-1240.29"/>
+                    </DataRow>
+                    <subtotalRow rowNumber="12">
+                        <RowData rowType="name" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="1" value="1007/HOME TOWN MORTGAGE"/>
+                        <colData colId="9" value="2801.47"/>
+                    </subtotalRow>
+                </reportData>
+                <reportData>
+                    <TotalRow rowNumber="13">
+                        <ColData colId="1" value="TOTAL"/>
+                        <ColData colId="9" value="2801.47"/>
+                    </TotalRow>
+                </reportData>
+            </ReportRet>
+        </GeneralDetailReportQueryRs>
+    </QBXMLMsgsRs>
+</QBXML>
