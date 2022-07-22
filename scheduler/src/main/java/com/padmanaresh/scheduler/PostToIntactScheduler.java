@@ -20,9 +20,9 @@ public class PostToIntactScheduler {
 
     @Scheduled(cron = "0/5 * * * * ?")
     public void triggerSchedulerEvent(){
-        System.out.println("Triggering Event every five seconds");
+       // System.out.println("Triggering Event every five seconds");
         multiCaster.multicastEvent(new PostToIntacctEvent("source", String.valueOf(new Random().nextInt(100))));
-        System.out.println("Event Triggered");
+       // System.out.println("Event Triggered");
     }
 
 }

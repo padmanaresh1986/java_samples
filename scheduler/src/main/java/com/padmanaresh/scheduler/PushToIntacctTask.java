@@ -21,5 +21,6 @@ public class PushToIntacctTask implements Runnable{
                 e.printStackTrace();
             }
             });
+            System.out.println("Completed batch of size " + identifier);
     }
 }
