@@ -9,7 +9,7 @@
 	</parent>
 	<artifactId>proto-module</artifactId>
 	<properties>
-		<grpc.version>1.40.1</grpc.version>
+		<grpc.version>1.53.0</grpc.version>
 	</properties>
 
 	<dependencies>
